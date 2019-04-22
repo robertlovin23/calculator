@@ -1,0 +1,46 @@
+<!DOCTYPE html5>
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale= 1.0">
+        <title>Price Calculator</title>
+        <link href = "style/main.css"  type = "text/css" rel = "stylesheet">
+    </head>
+    <body>
+    <div class = "price-container">
+        <div class = "container">
+            <h2 class = "title">Price Calculator</h2>
+        </div>
+        <div class = "form-container">
+            <form name = "theForm">
+                <div class = "selection">
+                    <label for = "rate">Price Rate</label>
+                    <select id = "rate">
+                        <option value = "15">$15</option>
+                        <option value = "20">$20</option>
+                        <option value = "25">$25</option>
+                        <option value = "30">$30</option>
+                        <option value = "35">$35</option>
+                        <option value = "40">$40</option>
+                    </select>
+                </div>
+                <div class = "selection">
+                    <label for = "hours">Amount of Hours</label>
+                    <input id = "hours" name ="hours" type = "number" :required>
+                </div>
+                <div class = "selection">
+                    <label for = "tax"> Tax: .0825%</label>
+                </div>
+                <div class = "selection">
+                    <input type = "button" value = "Calculate" onclick = "price(); validate();">
+                </div>
+            </form>
+            <div class = "total">
+                <h4>Total Price:</h4>
+                <span id = "total"></span>
+            </div>
+        </div>
+    </div>
+        <script src = "js/main.js"></script>
+    </body>
+</html>
